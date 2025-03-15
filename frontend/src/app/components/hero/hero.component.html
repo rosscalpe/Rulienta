@@ -1,0 +1,21 @@
+<div class="h-screen flex overflow-hidden" (mousemove)="handleMouseMove($event)" (mouseleave)="resetSections()">
+  <div class="flex justify-center items-center transition-all duration-300"
+       [ngStyle]="{
+         'width': leftWidth,
+         'background-image': 'url(/assets/img/Rulienta_Logo_fondonegro.jpg)',
+         'background-size': backgroundSizeLeft,
+         'background-position': 'center left',
+         'box-shadow': leftWidth === '50%' ? 'none' : 'inset 10px 0px 30px rgba(0,0,0,0.2)',
+       }">
+  </div>
+
+  <div class="flex justify-center items-center transition-all duration-300"
+       [ngStyle]="{
+         'width': rightWidth,
+         'background-image': 'url(/assets/img/Rulienta_Logo-1.jpg)',
+         'background-size': backgroundSizeRight,
+         'background-position': 'center right',
+         'box-shadow': rightWidth === '50%' ? 'none' : 'inset -10px 0px 30px rgba(0,0,0,0.2)',
+       }">
+  </div>
+</div>

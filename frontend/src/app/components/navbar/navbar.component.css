@@ -1,0 +1,15 @@
+nav {
+  background-color: rgb(26, 22, 22);
+}
+
+nav a {
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e5e7eb;
+}
+.logo-navbar{
+  width: 180px;
+  height: 60px;
+}
