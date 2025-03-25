@@ -13,3 +13,38 @@ nav a:hover {
   width: 180px;
   height: 60px;
 }
+
+ul.block {
+  display: block;
+}
+
+ul {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  background-color: rgb(26, 22, 22);
+  z-index: 10;
+  transition: all 0.3s ease;
+}
+
+
+.fab {
+  font-size: 1.5rem; /* Tamaño de los íconos */
+  transition: color 0.3s ease;
+}
+
+.fab:hover {
+  color: #d1d5db; /* Cambia el color al pasar el mouse */
+}
+
+@media (min-width: 768px) {
+  ul {
+    position: static;
+    display: flex !important;
+    top: auto;
+    left: auto;
+    width: auto;
+    background-color: transparent;
+  }
+}

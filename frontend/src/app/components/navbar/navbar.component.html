@@ -1,13 +1,48 @@
 <nav class="bg-blue-600 text-white p-4">
   <div class="container mx-auto flex justify-between items-center">
-    <!--logo-->
+    <!-- Logo -->
     <img class="logo-navbar" src="../../../assets/img/Rulienta_FondoTransparenteBLANCO.png" alt="Rulienta">
-    <!-- <h1 class="text-2xl font-bold">Rulienta</h1> -->
-    <ul class="flex space-x-6">
-      <li><a href="#" class="hover:text-gray-200">Home</a></li>
-      <li><a href="#about" class="hover:text-gray-200">About</a></li>
-      <li><a href="#portfolio" class="hover:text-gray-200">Portfolio</a></li>
-      <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
+
+    <!-- Botón de menú para móviles -->
+    <button class="md:hidden text-white" (click)="toggleMenu()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+      </svg>
+    </button>
+
+    <!-- Menú de navegación -->
+    <ul
+      class="flex flex-col md:flex-row md:space-x-6 md:static absolute top-20 left-0 w-full bg-blue-600 md:bg-transparent md:w-auto transition-all duration-300"
+      [ngClass]="{'hidden': !menuOpen, 'block': menuOpen}">
+      <li class="w-full text-center"><a href="#about" class="hover:text-gray-200 block py-2 px-4 md:p-0">About</a></li>
+      <li class="w-full text-center"><a href="#portfolio" class="hover:text-gray-200 block py-2 px-4 md:p-0">Portfolio</a></li>
+      <li class="w-full text-center"><a href="#contact" class="hover:text-gray-200 block py-2 px-4 md:p-0">Contact</a></li>
+
+      <!-- Redes sociales (en el menú desplegable en móviles) -->
+      <li class="flex justify-center space-x-4 py-4 md:hidden">
+        <a href="https://github.com/tucuenta" target="_blank" class="fab hover:text-gray-200">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://instagram.com/tucuenta" target="_blank" class="fab hover:text-gray-200">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://linkedin.com/in/tucuenta" target="_blank" class="fab hover:text-gray-200">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
     </ul>
+
+    <!-- Redes sociales (en el menú normal para escritorio) -->
+    <div class="hidden md:flex space-x-4">
+      <a href="https://github.com/tucuenta" target="_blank" class="fab hover:text-gray-200">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://instagram.com/tucuenta" target="_blank" class="fab hover:text-gray-200">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://linkedin.com/in/tucuenta" target="_blank" class="fab hover:text-gray-200">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
   </div>
 </nav>

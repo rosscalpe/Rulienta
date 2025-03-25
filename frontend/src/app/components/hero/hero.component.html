@@ -1,21 +1,18 @@
-<div class="h-screen flex overflow-hidden" (mousemove)="handleMouseMove($event)" (mouseleave)="resetSections()">
-  <div class="flex justify-center items-center transition-all duration-300"
-       [ngStyle]="{
-         'width': leftWidth,
-         'background-image': 'url(/assets/img/Rulienta_Logo_fondonegro.jpg)',
-         'background-size': backgroundSizeLeft,
-         'background-position': 'center left',
-         'box-shadow': leftWidth === '50%' ? 'none' : 'inset 10px 0px 30px rgba(0,0,0,0.2)',
-       }">
+<div class="split-container" (mousemove)="handleMouseMove($event)" (mouseleave)="resetSections()">
+  <div class="split left" [ngStyle]="{'width': leftWidth , 'opacity': leftOpacity}">
+    <img src="/assets/img/Rulienta_Logo_fondonegro.jpg" alt="Dark Logo">
   </div>
 
-  <div class="flex justify-center items-center transition-all duration-300"
-       [ngStyle]="{
-         'width': rightWidth,
-         'background-image': 'url(/assets/img/Rulienta_Logo-1.jpg)',
-         'background-size': backgroundSizeRight,
-         'background-position': 'center right',
-         'box-shadow': rightWidth === '50%' ? 'none' : 'inset -10px 0px 30px rgba(0,0,0,0.2)',
-       }">
+  <div class="split right" [ngStyle]="{'width': rightWidth, 'opacity': rightOpacity}">
+    <img src="/assets/img/Rulienta_Logo-1.jpg" alt="Light Logo">
+  </div>
+</div>
+<div class="split-container2">
+  <div class="imgMobile">
+    <img src="/assets/img/Rulienta_Logo-1.jpg" alt="Light Logo">
+  </div>
+  <div class="hero-containerText">
+    <p class="hero-subtitle">Rulienta is a tecnology company specializing in software development and web applicarions. Rulienta is led by Rosemary Calderón, also known as Ross, who is an engineer, musician, and software developer. Learn more about her in </p>
+    <a href="#about">About</a>
   </div>
 </div>
