@@ -1,17 +1,46 @@
 nav {
-  background-color: rgb(26, 22, 22);
+  background-color: #000000;
 }
 
 nav a {
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  padding: 8px 16px;
+  border-radius: 6px;
 }
 
 nav a:hover {
-  color: #e5e7eb;
+  color: #ffffff;
+  background-color: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
-.logo-navbar{
+
+/* Efecto de subrayado animado */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 80%;
+}
+
+.logo-navbar {
   width: 180px;
   height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo-navbar:hover {
+  transform: scale(1.05);
 }
 
 ul.block {
@@ -23,19 +52,23 @@ ul {
   top: 90px;
   left: 0;
   width: 100%;
-  background-color: rgb(26, 22, 22);
+  background-color: #000000;
   z-index: 10;
   transition: all 0.3s ease;
 }
 
-
 .fab {
-  font-size: 1.5rem; /* Tamaño de los íconos */
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  padding: 8px;
+  border-radius: 50%;
 }
 
 .fab:hover {
-  color: #d1d5db; /* Cambia el color al pasar el mouse */
+  color: #ffffff;
+  background-color: #333333;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
 }
 
 @media (min-width: 768px) {

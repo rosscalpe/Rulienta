@@ -1,48 +1,113 @@
-div {
-  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-}
-.split-container {
+.hero-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
-  display: flex;
-  overflow: hidden;
-}
-
-.split {
-  height: 100%;
-  transition: width 0.4s ease-out, opacity 0.3s ease-out;
+  height: calc(100vh - 145px); /* Resta 120px para mostrar el footer */
+  min-height: 500px; /* Altura mínima para mantener el diseño */
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
 }
 
-.split img {
+.hero-image-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.split-container2{
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #000000 50%, #ffffff 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease-out;
+}
+
+.hero-image.dark-mode {
+  background: #000000;
+}
+
+.hero-image.light-mode {
+  background: #ffffff;
+}
+
+.hero-image img {
+  position: absolute;
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  transition: opacity 0.4s ease-out;
+}
+
+.logo-white {
+  opacity: 0;
+}
+
+.logo-dark {
+  opacity: 1;
+}
+
+.hero-image.dark-mode .logo-white {
+  opacity: 1;
+}
+
+.hero-image.dark-mode .logo-dark {
+  opacity: 0;
+}
+
+.hero-image.light-mode .logo-white {
+  opacity: 0;
+}
+
+.hero-image.light-mode .logo-dark {
+  opacity: 1;
+}
+
+.hover-zone {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.left-zone {
+  left: 0;
+}
+
+.right-zone {
+  right: 0;
+}
+
+.split-container2 {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  .split-container {
+  .hero-container {
     display: none;
   }
-  .split-container2{
+
+  .split-container2 {
     display: block;
     width: 100%;
-    height: 73%;
+    height: 70%;
   }
-  .imgMobile{
+
+  .imgMobile {
     display: block;
     width: 100%;
     height: 50%;
     margin: 20px 10px 0px 0px;
   }
-  .hero-containerText{
+
+  .hero-containerText {
     width: 90%;
     margin: 0 auto;
     border: solid 1px #8d8989;
@@ -50,13 +115,14 @@ div {
     box-shadow: 0 0 10px #8d8989;
   }
 
-  .hero-subtitle{
+  .hero-subtitle {
     font-size: 1rem;
     margin: 0;
     padding: 10px;
     text-align: center;
   }
-  .hero-containerText a{
+
+  .hero-containerText a {
     display: block;
     width: 50%;
     margin: 0 auto;

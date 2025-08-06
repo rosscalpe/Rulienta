@@ -9,10 +9,8 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
-  leftWidth = '50%';
-  rightWidth = '50%';
-  rightOpacity = 1;
-  leftOpacity = 1;
+  isDarkMode = false;
+  isLightMode = false;
   isMobile = false;
 
   constructor() {
@@ -21,39 +19,35 @@ export class HeroComponent {
 
   @HostListener('window:resize', [])
   checkScreenSize() {
-    this.isMobile = window.innerWidth <= 768; // Detecta si es teléfono o tablet
+    this.isMobile = window.innerWidth <= 768;
   }
 
   handleMouseMove(event: MouseEvent) {
-    const screenWidth = window.innerWidth;
-    const mouseX = event.clientX;
-    console.log("mouse X: ",mouseX, "screen width: ", screenWidth);
+    const container = event.currentTarget as HTMLElement;
+    const rect = container.getBoundingClientRect();
+    const mouseX = event.clientX - rect.left;
+    const containerWidth = rect.width;
 
-    // Expandir la izquierda
-    const leftPercentage = ((mouseX - screenWidth / 2) / (screenWidth / 2)) * 100;
-    this.leftWidth = `${50 + leftPercentage / 2}%`;
-    this.rightWidth = `${50 - leftPercentage / 2}%`;
-    if (parseFloat(this.rightWidth) < 0) {
-      this.rightWidth = '0%';
+    // Si está en la mitad izquierda, activa modo oscuro
+    if (mouseX < containerWidth / 2) {
+      this.setDarkMode();
+    } else {
+      this.setLightMode();
     }
-      // Expandir la derecha
-      const rightPercentage = ((mouseX - screenWidth / 2) / (screenWidth / 2)) * 100;
-      this.rightWidth = `${50 + rightPercentage / 2}%`;
-      this.leftWidth = `${50 - rightPercentage / 2}%`;
-      if (parseFloat(this.leftWidth) < 0) {
-        this.leftWidth = '0%';
-      }
-
-    // Ajustar opacidades
-    this.leftOpacity = parseFloat(this.leftWidth) / 100;
-    this.rightOpacity = parseFloat(this.rightWidth) / 100;
-
-  }
-  resetSections() {
-    this.leftWidth = '50%';
-    this.rightWidth = '50%';
-    this.rightOpacity = 1;
-    this.leftOpacity = 1;
   }
 
+  setDarkMode() {
+    this.isDarkMode = true;
+    this.isLightMode = false;
+  }
+
+  setLightMode() {
+    this.isDarkMode = false;
+    this.isLightMode = true;
+  }
+
+  resetImage() {
+    this.isDarkMode = false;
+    this.isLightMode = false;
+  }
 }

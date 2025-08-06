@@ -1,10 +1,11 @@
-<div class="split-container" (mousemove)="handleMouseMove($event)" (mouseleave)="resetSections()">
-  <div class="split left" [ngStyle]="{'width': leftWidth , 'opacity': leftOpacity}">
-    <img src="/assets/img/Rulienta_Logo_fondonegro.jpg" alt="Dark Logo">
-  </div>
-
-  <div class="split right" [ngStyle]="{'width': rightWidth, 'opacity': rightOpacity}">
-    <img src="/assets/img/Rulienta_Logo-1.jpg" alt="Light Logo">
+<div class="hero-container">
+  <div class="hero-image-container" (mousemove)="handleMouseMove($event)" (mouseleave)="resetImage()">
+    <div class="hero-image" [ngClass]="{'dark-mode': isDarkMode, 'light-mode': isLightMode}">
+      <img src="/assets/img/Rulienta_FondoTransparenteBLANCO.png" alt="Rulienta Logo" class="logo-white">
+      <img src="/assets/img/Rulienta_FondoTransparente-1.png" alt="Rulienta Logo" class="logo-dark">
+    </div>
+    <div class="hover-zone left-zone" (mouseenter)="setDarkMode()"></div>
+    <div class="hover-zone right-zone" (mouseenter)="setLightMode()"></div>
   </div>
 </div>
 <div class="split-container2">
