@@ -2,22 +2,22 @@ nav {
   background-color: #000000;
 }
 
-nav a {
+nav a:not(:has(.logo-navbar)) {
   transition: all 0.3s ease;
   position: relative;
   padding: 8px 16px;
   border-radius: 6px;
 }
 
-nav a:hover {
+nav a:not(:has(.logo-navbar)):hover {
   color: #ffffff;
   background-color: #333333;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-/* Efecto de subrayado animado */
-nav a::after {
+/* Efecto de subrayado animado (excluye el logo) */
+nav a:not(:has(.logo-navbar))::after {
   content: '';
   position: absolute;
   width: 0;
@@ -29,18 +29,18 @@ nav a::after {
   transform: translateX(-50%);
 }
 
-nav a:hover::after {
+nav a:not(:has(.logo-navbar)):hover::after {
   width: 80%;
 }
 
 .logo-navbar {
   width: 180px;
   height: 60px;
-  transition: transform 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 .logo-navbar:hover {
-  transform: scale(1.05);
+  opacity: 0.5;
 }
 
 ul.block {
