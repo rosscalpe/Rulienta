@@ -17,6 +17,7 @@
 }
 
 .hero-intro h1 {
+  font-family: 'Novitha Script', cursive;
   font-size: 4rem;
   font-weight: 500;
   color: #333;
@@ -29,11 +30,15 @@
   grid-template-columns: 2fr 1fr;
   gap: 3rem;
   align-items: start;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #e5e7eb;
+
 }
 
 .intro-text {
   font-size: 1.2rem;
   line-height: 1.8;
+  width:80%;
 }
 
 .intro-paragraph {
@@ -48,13 +53,13 @@
 
 .profile-image {
   width: 300px;
-  height: 390px;
+  height: 450px;
   border-radius: 10px;
   object-fit: cover;
   border: 4px solid #f0f0f0;
   transition: transform 0.3s ease;
   position: relative;
-  top:-90px;
+  top:-60px;
 }
 
 .profile-image:hover {
@@ -64,15 +69,17 @@
 /* Skills Section */
 .skills-section {
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
-  margin-bottom: 4rem;
+  padding-bottom: 4rem;
   align-items: start;
+  border-bottom: 1px solid #e5e7eb;;
 }
 
 .skill-category h2 {
-  font-size: 1.8rem;
+  font-size: 3.5rem;
   font-weight: 500;
+  font-family: 'Novitha Script', cursive;;
   color: #333;
   margin-bottom: 1rem;
   padding-bottom: 0.5rem;
@@ -93,7 +100,7 @@
 .pie-chart-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   padding: 1rem;
 }
@@ -103,12 +110,13 @@
   height: 200px;
   border-radius: 50%;
   background: conic-gradient(
-    #007acc 0deg 216deg,
-    #ff6b6b 216deg 360deg
+    #20b2aa 0deg 216deg,
+    #4682b4 216deg 360deg
   );
   margin-bottom: 1.5rem;
   position: relative;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 30%;
 }
 
 .pie-chart::after {
@@ -147,23 +155,26 @@
 }
 
 .color-indicator.dev {
-  background-color: #007acc;
+  background-color: #20b2aa;
 }
 
 .color-indicator.music {
-  background-color: #ff6b6b;
+  background-color: #4682b4;
 }
 
 /* Facts Section */
 .facts-section {
   margin-bottom: 4rem;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 10px;
 }
 
 .facts-section h2 {
-  font-size: 1.8rem;
+  font-size: 3.5rem;
+  font-family: 'Novitha Script', cursive;
   font-weight: 500;
   color: #333;
-  margin-top: 20px;
+  margin-top: 30px;
   margin-bottom: 1.5rem;
   padding-bottom: 0.5rem;
 }
@@ -172,7 +183,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: center;
 }
 
 .facts-text {
@@ -188,7 +198,7 @@
 }
 
 .facts-list li {
-  padding: 0.8rem 0;
+  padding: 0.5rem 0;
   color: #666;
   font-size: 1rem;
 }
@@ -197,6 +207,8 @@
   order: 2;
   display: flex;
   justify-content: center;
+  position: relative;
+  top: -65px;
 }
 
 .facts-img {
@@ -207,6 +219,7 @@
   object-fit: cover;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  margin-left: 25%;
 }
 
 .facts-img:hover {
@@ -222,10 +235,11 @@
 }
 
 .story-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
+  font-size: 3.5rem;
+  font-family: 'Novitha Script', cursive;
   color: #333;
   margin-bottom: 1rem;
+  text-align: start;
 }
 
 .story-section p {
@@ -249,38 +263,192 @@
   border-bottom-color: #007acc;
 }
 
+/* Skills Bar Section */
+.skills-bar-section {
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4rem;
+}
+
+.skills-bar-section h2 {
+  font-size: 3.5rem;
+  font-family: 'Novitha Script', cursive;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 2rem;
+}
+
+.skill-levels {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding: 0 2rem;
+}
+
+.level-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #666;
+}
+
+.level-label.dumbledore {
+  color: #4a90e2;
+}
+
+.level-label.merlin {
+  color: #7b68ee;
+}
+
+.level-label.jafar {
+  color: #ff6b6b;
+}
+
+.level-label.muggle {
+  color: #95a5a6;
+}
+
+.skills-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-bar {
+  background-color: #f8f9fa;
+  height: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-fill {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: width 2s ease-in-out;
+}
+
+.skill-fill.rulienta {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.skill-fill.mother {
+  width: 95%;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.skill-fill.developer {
+  width: 90%;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.skill-fill.wine-drinking {
+  width: 80%;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+}
+
+.skill-fill.singer {
+  width: 60%;
+  background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%);
+}
+
+.skill-fill.voley-player {
+  width: 40%;
+  background: linear-gradient(135deg, #e17055 0%, #d63031 100%);
+}
+
+.skill-text {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.skill-name {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
+  .about-section {
+    padding: 2rem 1rem;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
   .hero-intro h1 {
     font-size: 2.5rem;
     text-align: center;
+    margin-bottom: 1.5rem;
   }
 
   .intro-content {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .intro-text {
+    width: 100%;
+    font-size: 1.1rem;
+  }
+
+  .profile-image {
+    width: 250px;
+    height: 320px;
+    position: static;
+    top: 0;
   }
 
   .skills-section {
     grid-template-columns: 1fr;
     gap: 2rem;
     text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .skill-category h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
 
   .pie-chart-container {
-    order: -1;
-    margin-bottom: 2rem;
+    order: 2;
+    margin: 2rem 0;
+    align-items: center;
   }
 
   .pie-chart {
     width: 150px;
     height: 150px;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .pie-chart::after {
     width: 60px;
     height: 60px;
+  }
+
+  .facts-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .facts-section h2 {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+    text-align: center;
   }
 
   .facts-content {
@@ -290,47 +458,173 @@
 
   .facts-text {
     order: 2;
+    display: flex;
+    justify-content: center;
   }
 
   .facts-image {
     order: 1;
+    top: 0;
   }
 
-  .profile-image {
-    width: 150px;
-    height: 190px;
-    position: static;
+  .facts-img {
+    margin-left: 0;
+    max-width: 250px;
   }
 
-  .about-section {
-    padding: 2rem 1rem;
+  .skills-bar-section {
+    padding-bottom: 2rem;
+  }
+
+  .skills-bar-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .skill-levels {
+    display: none;
+  }
+
+  .skill-bar {
+    height: 60px;
+    margin-bottom: 1rem;
+    position: relative;
+    border-radius: 8px;
+    overflow: visible;
+  }
+
+  .skill-fill {
+    position: relative;
+    overflow: visible;
+  }
+
+  .skill-fill::after {
+    content: attr(data-level);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    color: white;
+    white-space: nowrap;
+  }
+
+  .skill-fill.rulienta::after {
+    content: "🧙‍♂️ Dumbledore Level";
+    background: #4a90e2;
+  }
+
+  .skill-fill.mother::after {
+    content: "🧙‍♂️ Dumbledore Level";
+    background: #4a90e2;
+  }
+
+  .skill-fill.developer::after {
+    content: "🧙‍♂️ Dumbledore Level";
+    background: #4a90e2;
+  }
+
+  .skill-fill.wine-drinking::after {
+    content: "✨ Merlin Level";
+    background: #7b68ee;
+  }
+
+  .skill-fill.singer::after {
+    content: "🐍 Jafar Level";
+    background: #ff6b6b;
+  }
+
+  .skill-fill.voley-player::after {
+    content: "👤 Muggle Level";
+    background: #95a5a6;
+  }
+
+  .skill-text {
+    font-size: 1rem;
+  }
+
+  .skill-name {
+    font-size: 1rem;
+  }
+
+  .story-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+  }
+
+  .story-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .story-section p {
+    font-size: 1rem;
+  }
+  .facts-list li{
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
+  .about-section {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
   .hero-intro h1 {
     font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .intro-content {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .intro-text {
     font-size: 1rem;
+    line-height: 1.6;
   }
 
-  .intro-image{
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
+  .intro-paragraph {
+    margin-bottom: 1rem;
+  }
+
+  .profile-image {
+    width: 200px;
+    height: 260px;
+  }
+
+  .skills-section {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .skill-category h2,
   .facts-section h2,
-  .story-section h2 {
-    font-size: 1.5rem;
+  .skills-bar-section h2 {
+    font-size: 2rem;
+  }
+  .skills-bar-section h2{
+    padding-bottom: 2rem;
+  }
+
+  .skills-list li {
+    font-size: 1rem;
+    padding: 0.3rem 0;
   }
 
   .pie-chart {
     width: 120px;
     height: 120px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .pie-chart::after {
@@ -340,5 +634,143 @@
 
   .chart-label {
     font-size: 0.8rem;
+    gap: 0.3rem;
+  }
+
+  .color-indicator {
+    width: 10px;
+    height: 10px;
+  }
+
+  .facts-section {
+    margin-bottom: 1.5rem;
+  }
+
+  .facts-list {
+    gap: 0.5rem;
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .facts-list li {
+    font-size: 0.9rem;
+    padding: 0.3rem 0;
+    text-align: center;
+  }
+
+  .facts-img {
+    max-width: 200px;
+  }
+
+  .skills-bar-section {
+    padding-bottom: 1.5rem;
+  }
+
+  .skill-bar {
+    height: 50px;
+    margin-bottom: 1.2rem;
+    overflow: visible;
+  }
+
+  .skill-fill::after {
+    font-size: 0.7rem;
+    top: -25px;
+    padding: 0.15rem 0.4rem;
+  }
+
+  .skill-text {
+    font-size: 0.8rem;
+  }
+
+  .skill-name {
+    font-size: 0.8rem;
+  }
+
+  .story-section {
+    margin: 1.5rem 0;
+    padding: 1rem;
+  }
+
+  .story-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.8rem;
+    text-align: center;
+  }
+
+  .story-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .about-section {
+    padding: 1rem 0.3rem;
+  }
+
+  .hero-intro h1 {
+    font-size: 1.8rem;
+  }
+
+  .intro-text {
+    font-size: 0.9rem;
+  }
+
+  .profile-image {
+    width: 180px;
+    height: 230px;
+  }
+
+  .skill-category h2,
+  .facts-section h2,
+  .skills-bar-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .pie-chart {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pie-chart::after {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skill-bar {
+    height: 45px;
+    margin-bottom: 1rem;
+    overflow: visible;
+  }
+
+  .skill-fill::after {
+    font-size: 0.6rem;
+    top: -22px;
+    padding: 0.1rem 0.3rem;
+  }
+
+  .skill-text,
+  .skill-name {
+    font-size: 0.7rem;
+  }
+
+  .facts-img {
+    max-width: 180px;
+  }
+
+  .story-section {
+    padding: 0.8rem;
+  }
+
+  .story-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .story-section p {
+    font-size: 0.85rem;
   }
 }

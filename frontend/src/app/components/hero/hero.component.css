@@ -1,3 +1,10 @@
+/* Reset para el componente hero */
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
 .hero-container {
   position: relative;
   width: 100vw;
@@ -100,38 +107,145 @@
   .split-container2 {
     display: block;
     width: 100%;
-    height: 70%;
+    min-height: calc(100vh - 145px);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-hero-content {
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - 145px);
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
   }
 
   .imgMobile {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 120px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  .imgMobile img {
     width: 100%;
-    height: 50%;
-    margin: 20px 10px 0px 0px;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.1));
   }
 
   .hero-containerText {
-    width: 90%;
-    margin: 0 auto;
-    border: solid 1px #8d8989;
-    border-radius: 10px;
-    box-shadow: 0 0 10px #8d8989;
+    width: 100%;
+    max-width: 400px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .location-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(102, 126, 234, 0.1);
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(102, 126, 234, 0.2);
+  }
+
+  .flag {
+    font-size: 1.2rem;
+  }
+
+  .location-text {
+    font-size: 0.9rem;
+    color: #667eea;
+    font-weight: 600;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 15px;
+    line-height: 1.2;
+  }
+
+  .ampersand {
+    color: #667eea;
+    font-style: italic;
+    font-size: 1.5rem;
   }
 
   .hero-subtitle {
     font-size: 1rem;
-    margin: 0;
-    padding: 10px;
+    line-height: 1.6;
+    color: #4a5568;
+    margin-bottom: 25px;
+    padding: 0;
+  }
+
+  .brand-highlight {
+    color: #667eea;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+  }
+
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-block;
     text-align: center;
   }
 
-  .hero-containerText a {
-    display: block;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 10px;
-    text-align: center;
-    color: black;
-    text-decoration: none;
+  .cta-button.primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+  }
+
+  .cta-button.primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 20px rgba(102, 126, 234, 0.4);
+  }
+
+  .cta-button.secondary {
+    background: transparent;
+    color: #667eea;
+    border: 2px solid #667eea;
+  }
+
+  .cta-button.secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
   }
 }

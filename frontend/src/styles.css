@@ -3,5 +3,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Definición de fuente personalizada - Novitha Script */
+@font-face {
+  font-family: 'Novitha Script';
+  src: url('./assets/fonts/Novitha Script-Demo.otf') format('opentype'),
+       url('./assets/fonts/Novitha Script-Demo.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

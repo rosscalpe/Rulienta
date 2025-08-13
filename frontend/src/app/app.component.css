@@ -1,0 +1,31 @@
+/* Reset para eliminar espacios en blanco */
+app-navbar {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+router-outlet {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+app-hero {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+app-footer {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/* Eliminar cualquier espacio entre componentes */
+:host {
+  display: block;
+  margin: 0;
+  padding: 0;
+}

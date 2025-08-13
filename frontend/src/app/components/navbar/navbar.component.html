@@ -16,9 +16,9 @@
     <ul
       class="flex flex-col md:flex-row md:space-x-6 md:static absolute top-20 left-0 w-full bg-blue-600 md:bg-transparent md:w-auto transition-all duration-300"
       [ngClass]="{'hidden': !menuOpen, 'block': menuOpen}">
-      <li class="w-full text-center"><a routerLink="/about" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0">About</a></li>
-      <li class="w-full text-center"><a href="#portfolio" class="hover:text-gray-200 block py-2 px-4 md:p-0">Portfolio</a></li>
-      <li class="w-full text-center"><a routerLink="/contact" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0">Contact</a></li>
+      <li class="w-full text-center"><a routerLink="/about" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0" (click)="closeMenu()">About</a></li>
+      <li class="w-full text-center"><a href="#portfolio" class="hover:text-gray-200 block py-2 px-4 md:p-0" (click)="closeMenu()">Portfolio</a></li>
+      <li class="w-full text-center"><a routerLink="/contact" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0" (click)="closeMenu()">Contact</a></li>
 
       <!-- Redes sociales (en el menú desplegable en móviles) -->
       <li class="flex justify-center space-x-4 py-4 md:hidden">
