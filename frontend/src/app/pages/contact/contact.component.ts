@@ -46,7 +46,7 @@ export class ContactComponent {
     },
     {
       name: 'Email',
-      url: 'mailto:rosemary@rulienta.com',
+      url: 'mailto:rosemarycalderonp@gmail.com',
       icon: 'fas fa-envelope'
     }
   ];
