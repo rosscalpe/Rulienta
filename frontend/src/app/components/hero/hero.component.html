@@ -11,18 +11,27 @@
 <div class="split-container2">
   <div class="mobile-hero-content">
     <div class="imgMobile">
-      <img src="/assets/img/logo_rulienta_1.png" alt="Rulienta Logo">
+      <img src="/assets/img/rulientaPic.jpeg" alt="Rulienta Profile" class="mobile-profile-image">
     </div>
     <div class="hero-containerText">
-      <div class="location-badge">
-        <span class="flag">🇦🇷</span>
-        <span class="location-text">Buenos Aires</span>
+      <div class="profile-section">
+        <div class="profile-info">
+          <span class="location-text">Buenos Aires, Argentina</span>
+        </div>
       </div>
-      <h1 class="hero-title">Software Engineer <span class="ampersand">&</span> Singer</h1>
-      <p class="hero-subtitle">I bring ideas to life through <strong class="brand-highlight">Rulienta</strong> — where technology meets creativity, music fuels innovation, and every line of code tells a story.</p>
+      <h1 class="hero-title">
+        {{ 'hero.title.before' | translate }}
+        <span class="rulienta-brand">{{ 'hero.title.highlight' | translate }}</span>
+        {{ 'hero.title.after' | translate }}
+      </h1>
+      <p class="hero-subtitle">
+        {{ 'hero.subtitle.before' | translate }}
+        <span class="rulienta-brand">{{ 'hero.subtitle.highlight' | translate }}</span>
+        {{ 'hero.subtitle.after' | translate }}
+      </p>
       <div class="hero-actions">
-        <a routerLink="/about" class="cta-button primary">Discover My Story</a>
-        <a href="#portfolio" class="cta-button secondary">View Portfolio</a>
+        <a routerLink="/about" class="cta-button primary">{{ 'hero.ctaButton' | translate }}</a>
+        <a href="#portfolio" class="cta-button secondary">{{ 'nav.portfolio' | translate }}</a>
       </div>
     </div>
   </div>

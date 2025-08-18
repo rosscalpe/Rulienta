@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MusicComponent } from './music.component';
+import { ScrollToTopComponent } from './scroll-to-top.component';
 
-describe('MusicComponent', () => {
-  let component: MusicComponent;
-  let fixture: ComponentFixture<MusicComponent>;
+describe('ScrollToTopComponent', () => {
+  let component: ScrollToTopComponent;
+  let fixture: ComponentFixture<ScrollToTopComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MusicComponent]
+      imports: [ScrollToTopComponent]
     })
     .compileComponents();
-    
-    fixture = TestBed.createComponent(MusicComponent);
+
+    fixture = TestBed.createComponent(ScrollToTopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

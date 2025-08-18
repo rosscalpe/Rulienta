@@ -1,16 +1,18 @@
 <section class="about-section">
   <div class="container">
     <div class="hero-intro">
-      <h1>About.</h1>
+      <h2>{{ 'about.title' | translate }}</h2>
       <div class="intro-content">
         <div class="intro-text">
           <p class="intro-paragraph">
-            I’m a software engineer and singer from La Ciudad de la Furia, Buenos Aires, Argentina.
+            {{ 'about.intro1' | translate }}
           </p>
           <p class="intro-paragraph">
-            I Bring ideas to life through <strong>Rulienta</strong> a space where technology meets creativity. My work focuses on building intuitive, efficient, and meaningful digital experiences.
+            {{ 'about.intro2.before' | translate }}
+            <span class="rulienta-brand">{{ 'about.intro2.highlight' | translate }}</span>
+            {{ 'about.intro2.after' | translate }}
           </p>
-          <p>Beyond coding, music is my other language. Singing allows me to express emotion and connect with people in a way that fuels my creativity and inspires my approach to technology.</p>
+          <p>{{ 'about.intro3' | translate }}</p>
         </div>
         <div class="intro-image">
           <img src="assets/img/rulientaPic.jpeg" alt="Rosemary Calderón - Rulienta" class="profile-image">
@@ -20,15 +22,15 @@
 
     <div class="skills-section">
       <div class="skill-category">
-        <h2>Developer</h2>
+        <h2>{{ 'about.developer' | translate }}</h2>
         <ul class="skills-list">
-          <li>Full-stack development</li>
+          <li>{{ 'about.skills.fullstack' | translate }}</li>
           <li>Angular & React</li>
           <li>Node.js & Python</li>
           <li>PHP & Java</li>
-          <li>Problem solving</li>
-          <li>Database design</li>
-          <li>API development</li>
+          <li>{{ 'about.skills.problemSolving' | translate }}</li>
+          <li>{{ 'about.skills.database' | translate }}</li>
+          <li>{{ 'about.skills.api' | translate }}</li>
         </ul>
       </div>
 
@@ -40,38 +42,37 @@
         <div class="chart-labels">
           <div class="chart-label developer">
             <span class="color-indicator dev"></span>
-            Developer (60%)
+            {{ 'about.developer' | translate }} (60%)
           </div>
           <div class="chart-label musician">
             <span class="color-indicator music"></span>
-            Musician (40%)
+            {{ 'about.musician' | translate }} (40%)
           </div>
         </div>
       </div>
 
       <div class="skill-category">
-        <h2>Musician</h2>
+        <h2>{{ 'about.musician' | translate }}</h2>
         <ul class="skills-list">
-          <li>Lyric singing</li>
-          <li>Classical voice training</li>
-          <li>Guitar playing</li>
-          <li>Rock covers</li>
-          <li>Song interpretation</li>
+          <li>{{ 'about.skills.lyricSinging' | translate }}</li>
+          <li>{{ 'about.skills.classicalVoice' | translate }}</li>
+          <li>{{ 'about.skills.guitar' | translate }}</li>
+          <li>{{ 'about.skills.rockCovers' | translate }}</li>
+          <li>{{ 'about.skills.songInterpretation' | translate }}</li>
         </ul>
       </div>
     </div>
 
     <div class="facts-section">
-      <h2>Random facts</h2>
+      <h2>{{ 'about.randomFacts' | translate }}</h2>
       <div class="facts-content">
         <div class="facts-text">
           <ul class="facts-list">
-            <li>Music is my creative fuel</li>
-            <li>I love blending technology with art</li>
-            <li>Mate is my coding companion</li>
-            <li>Always learning new technologies</li>
-            <li>Argentina is my creative base</li>
-            <li>I believe in the power of good comunication</li>
+            <li>{{ 'about.facts.music' | translate }}</li>
+            <li>{{ 'about.facts.blending' | translate }}</li>
+            <li>{{ 'about.facts.mate' | translate }}</li>
+            <li>{{ 'about.facts.learning' | translate }}</li>
+            <li>{{ 'about.facts.communication' | translate }}</li>
           </ul>
         </div>
         <div class="facts-image">
@@ -80,7 +81,7 @@
       </div>
     </div>
     <div class="skills-bar-section">
-      <h2>My skills</h2>
+      <h2>{{ 'about.mySkills' | translate }}</h2>
       <div class="skill-levels">
         <div class="level-label muggle">Muggle</div>
         <div class="level-label jafar">Jafar</div>
@@ -97,45 +98,45 @@
         <div class="skill-bar">
           <div class="skill-fill mother" data-percentage="95">
             <span class="skill-text">95%</span>
-            <span class="skill-name">Mother</span>
+            <span class="skill-name">{{ 'about.skillNames.mother' | translate }}</span>
           </div>
         </div>
         <div class="skill-bar">
           <div class="skill-fill developer" data-percentage="90">
             <span class="skill-text">90%</span>
-            <span class="skill-name">Developer</span>
+            <span class="skill-name">{{ 'about.skillNames.developer' | translate }}</span>
           </div>
         </div>
         <div class="skill-bar">
           <div class="skill-fill wine-drinking" data-percentage="80">
             <span class="skill-text">80%</span>
-            <span class="skill-name">Wine drinking</span>
+            <span class="skill-name">{{ 'about.skillNames.wineDrinking' | translate }}</span>
           </div>
         </div>
         <div class="skill-bar">
           <div class="skill-fill singer" data-percentage="60">
             <span class="skill-text">60%</span>
-            <span class="skill-name">Singer</span>
+            <span class="skill-name">{{ 'about.skillNames.singer' | translate }}</span>
           </div>
         </div>
         <div class="skill-bar">
           <div class="skill-fill voley-player" data-percentage="40">
             <span class="skill-text">40%</span>
-            <span class="skill-name">Voley Player</span>
+            <span class="skill-name">{{ 'about.skillNames.voleyPlayer' | translate }}</span>
           </div>
         </div>
       </div>
     </div>
     <div class="story-section">
-      <h2>My story</h2>
+      <h2>{{ 'about.myStory' | translate }}</h2>
       <p>
-        I entered the technology world driven by a desire to find work that would give me more quality time with my family. I wanted to pursue something I was passionate about while having the flexibility to work from home—something every mother truly needs.
+        {{ 'about.story.paragraph1' | translate }}
       </p>
       <p>
-        In 2021, I began this career journey that keeps me deeply immersed in technology today. The unique combination of technology, music, and motherhood defines who I am now. This is Rosemary Calderón—<strong>Rulienta</strong>—a brand representing a curly-haired girl full of life, motivation, and an innovative future ahead.
+        {{ 'about.story.paragraph2' | translate }}
       </p>
       <p>
-        Balancing my roles as a developer, musician, and mother has taught me the value of adaptability and creative problem-solving. Each aspect of my life enriches the others, creating a unique perspective that I bring to every project and collaboration.
+        {{ 'about.story.paragraph3' | translate }}
       </p>
     </div>
   </div>

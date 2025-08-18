@@ -1,0 +1,9 @@
+<button
+  *ngIf="isVisible"
+  (click)="scrollToTop()"
+  class="scroll-to-top-btn"
+  [attr.aria-label]="'scrollToTop.ariaLabel' | translate"
+  [attr.title]="'scrollToTop.title' | translate"
+>
+  <i class="fas fa-chevron-up"></i>
+</button>

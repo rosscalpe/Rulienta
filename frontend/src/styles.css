@@ -15,3 +15,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Clase para el color de marca Rulienta */
+.rulienta-brand {
+  color: #32a3a3;
+  text-shadow: 0 0 3px rgba(45, 122, 122, 0.5);
+  font-weight: 500;
+}
+
+/* Estilos específicos para elementos con marca */
+.hero-title .rulienta-brand,
+.hero-subtitle .rulienta-brand {
+  color: #2d7a7a;
+}

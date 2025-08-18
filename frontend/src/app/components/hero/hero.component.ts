@@ -1,11 +1,13 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslatePipe } from '../../pipes/translate.pipe';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
-  imports: [CommonModule, RouterLink],
+  imports: [CommonModule, RouterLink, TranslatePipe],
   templateUrl: './hero.component.html',
   styleUrls: ['./hero.component.css']
 })
@@ -14,8 +16,17 @@ export class HeroComponent {
   isLightMode = false;
   isMobile = false;
 
-  constructor() {
+  constructor(
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
     this.checkScreenSize();
+    // Suscribirse a los cambios de idioma de forma más segura
+    this.translationService.currentLanguage$.subscribe(() => {
+      setTimeout(() => {
+        this.cdr.detectChanges();
+      });
+    });
   }
 
   @HostListener('window:resize', [])
