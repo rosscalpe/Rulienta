@@ -20,7 +20,7 @@ export interface ApiResponse {
   providedIn: 'root'
 })
 export class ApiService {
-  private apiUrl = environment.apiUrl;
+  private apiUrl = 'https://rulienta-back.onrender.com/api';
 
   constructor(private http: HttpClient) { }
 
