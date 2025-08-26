@@ -18,7 +18,7 @@
         class="flex flex-col md:flex-row md:space-x-6 md:static absolute top-20 left-0 w-full bg-blue-600 md:bg-transparent md:w-auto transition-all duration-300"
         [ngClass]="{'hidden': !menuOpen, 'block': menuOpen}">
         <li class="w-full text-center md:w-max"><a routerLink="/about" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0 whitespace-nowrap" (click)="closeMenu()">{{ 'nav.about' | translate }}</a></li>
-        <li class="w-full text-center md:w-max"><a href="#portfolio" class="hover:text-gray-200 block py-2 px-4 md:p-0 whitespace-nowrap" (click)="closeMenu()">{{ 'nav.portfolio' | translate }}</a></li>
+        <li class="w-full text-center md:w-max"><a routerLink="/portfolio" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0 whitespace-nowrap" (click)="closeMenu()">{{ 'nav.portfolio' | translate }}</a></li>
         <li class="w-full text-center md:w-max"><a routerLink="/contact" routerLinkActive="active" class="hover:text-gray-200 block py-2 px-4 md:p-0 whitespace-nowrap" (click)="closeMenu()">{{ 'nav.contact' | translate }}</a></li>
 
         <!-- Redes sociales (en el menú desplegable en móviles) -->

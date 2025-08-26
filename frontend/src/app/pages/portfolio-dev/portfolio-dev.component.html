@@ -1,1 +1,178 @@
-<p>portfolio-dev works!</p>
+<div class="portfolio-dev-container">
+  <!-- Hero Section -->
+  <section class="portfolio-hero">
+    <div class="hero-content">
+      <h1 class="portfolio-title">{{ 'portfolioDev.title' | translate }}</h1>
+      <p class="portfolio-subtitle">
+        {{ 'portfolioDev.subtitle' | translate }}
+      </p>
+      <div class="experience-highlight">
+        <span class="experience-badge">{{ 'portfolioDev.experienceBadges.years' | translate }}</span>
+        <span class="experience-badge">{{ 'portfolioDev.experienceBadges.technologies' | translate }}</span>
+        <span class="experience-badge">{{ 'portfolioDev.experienceBadges.projects' | translate }}</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Notice -->
+  <section class="professional-notice">
+    <div class="notice-card">
+      <div class="notice-icon">💼</div>
+      <div class="notice-content">
+        <h3>{{ 'portfolioDev.professionalNotice.title' | translate }}</h3>
+        <p>
+          {{ 'portfolioDev.professionalNotice.paragraph1' | translate }}
+        </p>
+        <p>
+          {{ 'portfolioDev.professionalNotice.paragraph2' | translate }}
+        </p>
+        <p>
+          {{ 'portfolioDev.professionalNotice.paragraph3' | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Stats -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-number">3+</div>
+        <div class="stat-label">{{ 'portfolioDev.stats.experience' | translate }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">💻</div>
+        <div class="stat-number">10+</div>
+        <div class="stat-label">{{ 'portfolioDev.stats.technologies' | translate }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🏢</div>
+        <div class="stat-number">3+</div>
+        <div class="stat-label">{{ 'portfolioDev.stats.companies' | translate }}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">🚀</div>
+        <div class="stat-number">20+</div>
+        <div class="stat-label">{{ 'portfolioDev.stats.projects' | translate }}</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies Section -->
+  <section class="technologies-section">
+    <h2 class="section-title">{{ 'portfolioDev.technologies.title' | translate }}</h2>
+
+    <div class="tech-category">
+      <h3 class="category-title">{{ 'portfolioDev.technologies.frontend' | translate }}</h3>
+      <div class="tech-grid">
+        <div *ngFor="let tech of frontendTechs" class="tech-card">
+          <span class="tech-icon">{{ tech.icon }}</span>
+          <div class="tech-info">
+            <h4>{{ tech.name }}</h4>
+            <span class="tech-experience">{{ tech.experience }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-category">
+      <h3 class="category-title">{{ 'portfolioDev.technologies.backend' | translate }}</h3>
+      <div class="tech-grid">
+        <div *ngFor="let tech of backendTechs" class="tech-card">
+          <span class="tech-icon">{{ tech.icon }}</span>
+          <div class="tech-info">
+            <h4>{{ tech.name }}</h4>
+            <span class="tech-experience">{{ tech.experience }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tech-category">
+      <h3 class="category-title">{{ 'portfolioDev.technologies.databases' | translate }}</h3>
+      <div class="tech-grid">
+        <div *ngFor="let tech of databaseTechs" class="tech-card">
+          <span class="tech-icon">{{ tech.icon }}</span>
+          <div class="tech-info">
+            <h4>{{ tech.name }}</h4>
+            <span class="tech-experience">{{ tech.experience }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Experience -->
+  <section class="experience-section">
+    <h2 class="section-title">{{ 'portfolioDev.experience.title' | translate }}</h2>
+    <div class="experience-timeline">
+      <div *ngFor="let exp of professionalExperience" class="experience-item">
+        <div class="experience-header">
+          <h3>{{ exp.role }}</h3>
+          <span class="company">{{ exp.company }}</span>
+          <span class="period">{{ exp.period }}</span>
+        </div>
+        <p class="experience-description">{{ exp.description }}</p>
+        <div class="achievements">
+          <h4>{{ 'portfolioDev.experience.achievements' | translate }}</h4>
+          <ul>
+            <li *ngFor="let achievement of exp.achievements">{{ achievement }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GitHub Projects -->
+  <section class="projects-section">
+    <h2 class="section-title">{{ 'portfolioDev.projects.title' | translate }}</h2>
+    <p class="projects-intro">
+      {{ 'portfolioDev.projects.intro' | translate }}
+    </p>
+
+    <div class="projects-grid">
+      <div *ngFor="let project of githubProjects" class="project-card">
+        <div class="project-header">
+          <h3>{{ project.title }}</h3>
+          <span class="project-status" [ngClass]="project.status.toLowerCase().replace(' ', '-')">
+            {{ getStatusTranslation(project.status) }}
+          </span>
+        </div>
+        <p class="project-description">{{ project.description }}</p>
+        <div class="project-techs">
+          <span *ngFor="let tech of project.techs" class="tech-tag">{{ tech }}</span>
+        </div>
+        <div class="project-actions">
+          <a [href]="project.githubUrl" class="github-link" target="_blank">
+            <span class="github-icon">�</span>
+            Ver en GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="contact-cta">
+    <div class="cta-content">
+      <h2>{{ 'portfolioDev.cta.title' | translate }}</h2>
+      <p>{{ 'portfolioDev.cta.subtitle' | translate }}</p>
+      <div class="cta-features">
+        <div class="feature">
+          <span class="feature-icon">⚡</span>
+          <span>{{ 'portfolioDev.cta.features.agile' | translate }}</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🔧</span>
+          <span>{{ 'portfolioDev.cta.features.multiple' | translate }}</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🎯</span>
+          <span>{{ 'portfolioDev.cta.features.results' | translate }}</span>
+        </div>
+      </div>
+      <a routerLink="/contact" class="cta-button">{{ 'portfolioDev.cta.button' | translate }}</a>
+    </div>
+  </section>
+</div>

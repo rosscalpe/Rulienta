@@ -148,6 +148,74 @@ export class TranslationService {
         viewProject: 'View Project',
         listenNow: 'Listen Now'
       },
+      portfolioDev: {
+        title: 'Software Development',
+        subtitle: 'Full Stack Developer with experience in technology companies',
+        experienceBadges: {
+          years: '4+ years of experience',
+          technologies: 'Multiple technologies',
+          projects: 'Enterprise projects'
+        },
+        professionalNotice: {
+          title: 'Enterprise Professional Experience',
+          paragraph1: 'During my years as a developer, I have worked exclusively in enterprise environments, creating solutions for technology companies where I have participated in large-scale and high-complexity projects.',
+          paragraph2: 'Due to confidentiality policies and intellectual property, I cannot share source code, screenshots, or specific details of these commercial projects.',
+          paragraph3: 'My personal projects on GitHub are the best way to demonstrate my technical skills and passion for software development.'
+        },
+        stats: {
+          experience: 'Years of Experience',
+          technologies: 'Technologies Mastered',
+          companies: 'Technology Companies',
+          projects: 'Projects Developed'
+        },
+        technologies: {
+          title: 'Technologies & Tools',
+          frontend: 'Frontend',
+          backend: 'Backend',
+          databases: 'Databases'
+        },
+        experience: {
+          title: 'Professional Experience',
+          achievements: 'Key achievements:',
+          roles: {
+            fullstack: 'Full Stack Developer',
+            frontend: 'Frontend Developer'
+          },
+          companies: {
+            tech: 'Technology Company',
+            startup: 'Tech Startup'
+          },
+          achievementsList: {
+            scalable: 'Implementation of scalable solutions',
+            database: 'Database optimization',
+            apis: 'REST API development',
+            agile: 'Agile team work',
+            ux: 'User experience improvement',
+            responsive: 'Responsive design implementation',
+            integration: 'API integration',
+            design: 'Collaboration with design teams'
+          }
+        },
+        projects: {
+          title: 'Personal Projects on GitHub',
+          intro: 'In these projects you can see my technical skills from the beginning of my career and some are publicly available:',
+          status: {
+            completed: 'Completed',
+            development: 'In Development'
+          },
+          viewGithub: 'View on GitHub'
+        },
+        cta: {
+          title: 'Looking for a Full Stack Developer?',
+          subtitle: 'I am open to new job opportunities and freelance projects',
+          features: {
+            agile: 'Agile Development',
+            multiple: 'Multiple Technologies',
+            results: 'Results Focused'
+          },
+          button: 'Contact Me'
+        }
+      },
       contact: {
         title: 'Contact Me',
         subtitle: 'Let\'s work together',
@@ -253,6 +321,74 @@ export class TranslationService {
         music: 'Producciones Musicales',
         viewProject: 'Ver Proyecto',
         listenNow: 'Escuchar Ahora'
+      },
+      portfolioDev: {
+        title: 'Desarrollo de Software',
+        subtitle: 'Desarrolladora Full Stack con experiencia en empresas tecnológicas',
+        experienceBadges: {
+          years: '4+ años de experiencia',
+          technologies: 'Múltiples tecnologías',
+          projects: 'Proyectos empresariales'
+        },
+        professionalNotice: {
+          title: 'Experiencia Profesional Empresarial',
+          paragraph1: 'Durante mis años como desarrolladora, he trabajado exclusivamente en entornos empresariales, creando soluciones para empresas de tecnología donde he participado en proyectos de gran escala y alta complejidad.',
+          paragraph2: 'Debido a políticas de confidencialidad y propiedad intelectual, no puedo compartir código fuente, capturas de pantalla o detalles específicos de estos proyectos comerciales.',
+          paragraph3: 'Mis proyectos personales en GitHub son la mejor forma de demostrar mis habilidades técnicas y mi pasión por el desarrollo de software.'
+        },
+        stats: {
+          experience: 'Años de Experiencia',
+          technologies: 'Tecnologías Dominadas',
+          companies: 'Empresas de Tecnología',
+          projects: 'Proyectos Desarrollados'
+        },
+        technologies: {
+          title: 'Tecnologías y Herramientas',
+          frontend: 'Frontend',
+          backend: 'Backend',
+          databases: 'Bases de Datos'
+        },
+        experience: {
+          title: 'Experiencia Profesional',
+          achievements: 'Logros destacados:',
+          roles: {
+            fullstack: 'Desarrolladora Full Stack',
+            frontend: 'Desarrolladora Frontend'
+          },
+          companies: {
+            tech: 'Empresa de Tecnología',
+            startup: 'Startup Tecnológica'
+          },
+          achievementsList: {
+            scalable: 'Implementación de soluciones escalables',
+            database: 'Optimización de bases de datos',
+            apis: 'Desarrollo de APIs REST',
+            agile: 'Trabajo en equipo ágil',
+            ux: 'Mejora en la experiencia de usuario',
+            responsive: 'Implementación de diseños responsivos',
+            integration: 'Integración con APIs',
+            design: 'Colaboración con equipos de diseño'
+          }
+        },
+        projects: {
+          title: 'Proyectos Personales en GitHub',
+          intro: 'En estos proyectos puedes ver mis habilidades técnicas desde el comienzo de mi carrera y algunos están disponibles públicamente:',
+          status: {
+            completed: 'Completado',
+            development: 'En Desarrollo'
+          },
+          viewGithub: 'Ver en GitHub'
+        },
+        cta: {
+          title: '¿Buscas una Desarrolladora Full Stack?',
+          subtitle: 'Estoy abierta a nuevas oportunidades laborales y proyectos freelance',
+          features: {
+            agile: 'Desarrollo Ágil',
+            multiple: 'Múltiples Tecnologías',
+            results: 'Enfoque en Resultados'
+          },
+          button: 'Contactarme'
+        }
       },
       contact: {
         title: 'Contáctame',

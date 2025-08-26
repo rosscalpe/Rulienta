@@ -110,8 +110,8 @@
   height: 200px;
   border-radius: 50%;
   background: conic-gradient(
-    #20b2aa 0deg 216deg,
-    #4682b4 216deg 360deg
+    #32a3a3 0deg 216deg,
+    #2d7a7a 216deg 360deg
   );
   margin-bottom: 1.5rem;
   position: relative;
@@ -154,12 +154,12 @@
   border-radius: 50%;
 }
 
-.color-indicator.dev {
-  background-color: #20b2aa;
+.skill.dev {
+  background-color: #32a3a3;
 }
 
-.color-indicator.music {
-  background-color: #4682b4;
+.skill.music {
+  background-color: #2d7a7a;
 }
 
 /* Facts Section */
@@ -251,7 +251,7 @@
 
 .story-link {
   display: inline-block;
-  color: #007acc;
+  color: #32a3a3;
   text-decoration: none;
   font-weight: 600;
   font-size: 1rem;
@@ -260,7 +260,7 @@
 }
 
 .story-link:hover {
-  border-bottom-color: #007acc;
+  border-bottom-color: #32a3a3;
 }
 
 /* Skills Bar Section */

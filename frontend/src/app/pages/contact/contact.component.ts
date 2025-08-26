@@ -1,8 +1,10 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { TranslatePipe } from '../../pipes/translate.pipe';
 import { TranslationService } from '../../services/translation.service';
+import { ApiService, ContactMessage } from '../../services/api.service';
 
 interface ContactForm {
   name: string;
@@ -13,7 +15,7 @@ interface ContactForm {
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, FormsModule, TranslatePipe],
+  imports: [CommonModule, FormsModule, HttpClientModule, TranslatePipe],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
 })
@@ -53,7 +55,8 @@ export class ContactComponent {
 
   constructor(
     private translationService: TranslationService,
-    private cdr: ChangeDetectorRef
+    private cdr: ChangeDetectorRef,
+    private apiService: ApiService
   ) {
     // Suscribirse a los cambios de idioma de forma más segura
     this.translationService.currentLanguage$.subscribe(() => {
@@ -113,12 +116,29 @@ export class ContactComponent {
   }
 
   private async sendEmail(): Promise<void> {
-    // Simular delay de envío
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        console.log('Email sent:', this.form);
-        resolve();
-      }, 1500);
+    const contactData: ContactMessage = {
+      name: this.form.name.trim(),
+      email: this.form.email.trim(),
+      message: this.form.message.trim(),
+      subject: `Mensaje desde Portfolio - ${this.form.name}`
+    };
+
+    return new Promise((resolve, reject) => {
+      this.apiService.sendContactMessage(contactData).subscribe({
+        next: (response) => {
+          if (response.success) {
+            console.log('✅ Email enviado correctamente');
+            resolve();
+          } else {
+            console.error('❌ Error del servidor:', response.error);
+            reject(new Error(response.error || 'Error desconocido'));
+          }
+        },
+        error: (error) => {
+          console.error('❌ Error enviando email:', error);
+          reject(error);
+        }
+      });
     });
   }
 
