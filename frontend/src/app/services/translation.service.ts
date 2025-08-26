@@ -152,7 +152,7 @@ export class TranslationService {
         title: 'Software Development',
         subtitle: 'Full Stack Developer with experience in technology companies',
         experienceBadges: {
-          years: '4+ years of experience',
+          years: '3+ years of experience',
           technologies: 'Multiple technologies',
           projects: 'Enterprise projects'
         },
