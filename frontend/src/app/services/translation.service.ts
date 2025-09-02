@@ -326,7 +326,7 @@ export class TranslationService {
         title: 'Desarrollo de Software',
         subtitle: 'Desarrolladora Full Stack con experiencia en empresas tecnológicas',
         experienceBadges: {
-          years: '4+ años de experiencia',
+          years: '3+ años de experiencia',
           technologies: 'Múltiples tecnologías',
           projects: 'Proyectos empresariales'
         },
