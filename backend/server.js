@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import nodemailer from "nodemailer";
+import rateLimit from "express-rate-limit";
 
 dotenv.config();
 const app = express();
@@ -29,6 +30,22 @@ app.use(cors({
 
 app.use(express.json());
 
+const contactLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 5,
+  message: { success: false, error: "Demasiados intentos. Intenta de nuevo en 15 minutos." },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+const escapeHtml = (str) =>
+  String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+
 // Configuración de Nodemailer
 const transporter = nodemailer.createTransport({
   service: process.env.EMAIL_SERVICE || 'gmail',
@@ -52,7 +69,7 @@ app.get("/", (req, res) => {
 });
 
 // Endpoint para enviar emails de contacto
-app.post("/api/contact", async (req, res) => {
+app.post("/api/contact", contactLimiter, async (req, res) => {
   try {
     const { name, email, message, subject } = req.body;
 
@@ -73,21 +90,25 @@ app.post("/api/contact", async (req, res) => {
       });
     }
 
-    // Configuración del email
+    const safeName = escapeHtml(name);
+    const safeEmail = escapeHtml(email);
+    const safeMessage = escapeHtml(message).replace(/\n/g, '<br>');
+    const safeSubject = subject ? escapeHtml(subject) : `Nuevo mensaje de ${safeName} - Portfolio Rulienta`;
+
     const mailOptions = {
       from: `"${process.env.EMAIL_FROM_NAME || 'Rulienta Portfolio'}" <${process.env.EMAIL_USER}>`,
       to: process.env.EMAIL_TO,
-      subject: subject || `Nuevo mensaje de ${name} - Portfolio Rulienta`,
+      subject: safeSubject,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #32a3a3; border-bottom: 2px solid #32a3a3; padding-bottom: 10px;">
             📧 Nuevo mensaje desde tu Portfolio
           </h2>
-          
+
           <div style="background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0;">
             <h3 style="color: #2d7a7a; margin-top: 0;">Información del contacto:</h3>
-            <p><strong>👤 Nombre:</strong> ${name}</p>
-            <p><strong>📧 Email:</strong> ${email}</p>
+            <p><strong>👤 Nombre:</strong> ${safeName}</p>
+            <p><strong>📧 Email:</strong> ${safeEmail}</p>
             <p><strong>📅 Fecha:</strong> ${new Date().toLocaleDateString('es-ES', {
               year: 'numeric',
               month: 'long',
@@ -99,17 +120,17 @@ app.post("/api/contact", async (req, res) => {
 
           <div style="background: white; padding: 20px; border-left: 4px solid #32a3a3; margin: 20px 0;">
             <h3 style="color: #2d7a7a; margin-top: 0;">💬 Mensaje:</h3>
-            <p style="line-height: 1.6; color: #333;">${message.replace(/\n/g, '<br>')}</p>
+            <p style="line-height: 1.6; color: #333;">${safeMessage}</p>
           </div>
 
           <div style="background: #e8f5f5; padding: 15px; border-radius: 10px; margin: 20px 0;">
             <p style="margin: 0; color: #2d7a7a; font-size: 14px;">
-              💡 <strong>Tip:</strong> Puedes responder directamente a este email para contactar con ${name}
+              💡 <strong>Tip:</strong> Puedes responder directamente a este email para contactar con ${safeName}
             </p>
           </div>
         </div>
       `,
-      replyTo: email 
+      replyTo: safeEmail
     };
 
     // Enviar email
