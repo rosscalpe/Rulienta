@@ -14,7 +14,7 @@
 }
 
 .portfolio-title {
-  font-family: 'Novitha Script', cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 3.5rem;
   margin-bottom: 1rem;
   font-weight: 500;
@@ -144,7 +144,7 @@
 }
 
 .section-title {
-  font-family: 'Novitha Script', cursive;
+  font-family: 'Dancing Script', cursive;
   text-align: center;
   font-size: 3.5rem;
   margin-bottom: 3rem;
@@ -305,6 +305,8 @@
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -369,6 +371,9 @@
 .project-actions {
   display: flex;
   justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .github-link {
@@ -395,6 +400,26 @@
   font-size: 1.1rem;
 }
 
+.site-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.site-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* Contact CTA */
 .contact-cta {
   text-align: center;
@@ -406,7 +431,7 @@
 
 .cta-content h2 {
   font-size: 3rem;
-  font-family: 'Novitha Script', cursive;
+  font-family: 'Dancing Script', cursive;
   margin-bottom: 1rem;
   color: #fff;
 }

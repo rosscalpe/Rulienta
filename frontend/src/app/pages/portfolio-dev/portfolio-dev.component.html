@@ -144,8 +144,11 @@
           <span *ngFor="let tech of project.techs" class="tech-tag">{{ tech }}</span>
         </div>
         <div class="project-actions">
+          <a *ngIf="project.siteUrl" [href]="project.siteUrl" class="site-link" target="_blank">
+            🌐 Ver sitio
+          </a>
           <a [href]="project.githubUrl" class="github-link" target="_blank">
-            <span class="github-icon">�</span>
+            <i class="fab fa-github"></i>
             Ver en GitHub
           </a>
         </div>

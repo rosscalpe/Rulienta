@@ -49,24 +49,27 @@ export class PortfolioDevComponent {
   // Proyectos personales disponibles en GitHub
   githubProjects = [
     {
-      title: 'Rulienta Portfolio',
-      description: 'Portfolio personal desarrollado con Angular y Node.js, incluyendo funcionalidades de internacionalización y diseño responsivo.',
-      techs: ['Angular', 'Node.js', 'TypeScript', 'Tailwind CSS'],
-      githubUrl: 'https://github.com/rosscalpe/rulienta-portfolio',
-      status: 'En desarrollo'
-    },
-    {
-      title: 'Sistema de Gestión',
-      description: 'Aplicación web para gestión de inventarios con autenticación de usuarios y dashboard administrativo.',
-      techs: ['React', 'Node.js', 'MySQL', 'Express'],
-      githubUrl: 'https://github.com/rosscalpe',
+      title: 'Rulienta',
+      description: 'Portfolio personal con soporte de internacionalización (EN/ES), formulario de contacto con backend propio y diseño responsivo.',
+      techs: ['Angular', 'TypeScript', 'Node.js', 'Tailwind CSS'],
+      githubUrl: 'https://github.com/rosscalpe/Rulienta',
+      siteUrl: '',
       status: 'Completado'
     },
     {
-      title: 'API REST Microservices',
-      description: 'API escalable desarrollada con Python y FastAPI, implementando patrones de microservicios.',
-      techs: ['Python', 'FastAPI', 'SQLite', 'Docker'],
-      githubUrl: 'https://github.com/rosscalpe',
+      title: 'CV Lab',
+      description: 'Aplicación web para generar y descargar currículums en PDF de forma dinámica.',
+      techs: ['TypeScript', 'Angular'],
+      githubUrl: 'https://github.com/rosscalpe/cv-lab',
+      siteUrl: 'https://www.cvlabapp.com/login',
+      status: 'Completado'
+    },
+    {
+      title: 'E-commerce',
+      description: 'Proyecto de tienda online con catálogo de productos, carrito de compras y flujo de compra.',
+      techs: ['HTML', 'CSS', 'JavaScript'],
+      githubUrl: 'https://github.com/rosscalpe/ecommerce',
+      siteUrl: '',
       status: 'En desarrollo'
     }
   ];

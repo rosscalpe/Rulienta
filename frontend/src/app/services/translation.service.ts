@@ -68,7 +68,7 @@ export class TranslationService {
       }
     }
 
-    return translation || key;
+    return translation !== undefined && translation !== null ? translation : key;
   }
 
   private loadTranslations(): void {
@@ -82,14 +82,14 @@ export class TranslationService {
       hero: {
         greeting: 'Hello, I\'m',
         title: {
-          before: 'Software Engineer',
-          highlight: '&',
-          after: 'Singer'
+          before: 'Software',
+          highlight: 'Engineer',
+          after: ''
         },
         subtitle: {
           before: 'I bring ideas to life through',
           highlight: 'Rulienta',
-          after: '— where technology meets creativity, music fuels innovation, and every line of code tells a story.'
+          after: '— where technology meets creativity and every line of code tells a story.'
         },
         ctaButton: 'Discover My Story',
         ctaContact: 'Get In Touch'
@@ -97,13 +97,13 @@ export class TranslationService {
       about: {
         title: 'About Me',
         subtitle: 'Get to know me better',
-        intro1: 'I\'m a software engineer and singer from La Ciudad de la Furia, Buenos Aires, Argentina.',
+        intro1: 'I\'m a software engineer from La Ciudad de la Furia, Buenos Aires, Argentina.',
         intro2: {
           before: 'I bring ideas to life through',
           highlight: 'Rulienta',
           after: '— a space where technology meets creativity. My work focuses on building intuitive, efficient, and meaningful digital experiences.'
         },
-        intro3: 'Beyond coding, music is my other language. Singing allows me to express emotion and connect with people in a way that fuels my creativity and inspires my approach to technology.',
+        intro3: 'I\'m passionate about clean code, well-designed architectures, and continuous learning. I enjoy turning complex problems into elegant, functional solutions.',
         developer: 'Developer',
         musician: 'Musician',
         randomFacts: 'Random facts',
@@ -121,8 +121,8 @@ export class TranslationService {
           songInterpretation: 'Song interpretation'
         },
         facts: {
-          music: 'Music is my creative fuel',
-          blending: 'I love blending technology with art',
+          music: 'I love turning complex problems into elegant solutions',
+          blending: 'Open source and continuous learning drive me forward',
           mate: 'Mate is my coding companion',
           learning: 'Always learning new technologies',
           argentina: 'Argentina is my creative base',
@@ -137,8 +137,8 @@ export class TranslationService {
         },
         story: {
           paragraph1: 'I entered the technology world driven by a desire to find work that would give me more quality time with my family. I wanted to pursue something I was passionate about while having the flexibility to work from home—something every mother truly needs.',
-          paragraph2: 'In 2021, I began this career journey that keeps me deeply immersed in technology today. The unique combination of technology, music, and motherhood defines who I am now. This is Rosemary Calderón—Rulienta—a brand representing a curly-haired girl full of life, motivation, and an innovative future ahead.',
-          paragraph3: 'Balancing my roles as a developer, musician, and mother has taught me the value of adaptability and creative problem-solving. Each aspect of my life enriches the others, creating a unique perspective that I bring to every project and collaboration.'
+          paragraph2: 'In 2021, I began this career journey that keeps me deeply immersed in technology today. The combination of technology and motherhood defines who I am now. This is Rosemary Calderón—Rulienta—a brand representing a curly-haired girl full of life, motivation, and an innovative future ahead.',
+          paragraph3: 'Balancing my roles as a developer and mother has taught me the value of adaptability and creative problem-solving. Each aspect of my life enriches the others, creating a unique perspective that I bring to every project and collaboration.'
         }
       },
       portfolio: {
@@ -256,14 +256,14 @@ export class TranslationService {
       hero: {
         greeting: 'Hola, soy',
         title: {
-          before: 'Ingeniera de Software',
-          highlight: 'y',
-          after: 'Cantante'
+          before: 'Ingeniera de',
+          highlight: 'Software',
+          after: ''
         },
         subtitle: {
           before: 'Doy vida a las ideas a través de',
           highlight: 'Rulienta',
-          after: '— donde la tecnología se encuentra con la creatividad, la música impulsa la innovación, y cada línea de código cuenta una historia.'
+          after: '— donde la tecnología se encuentra con la creatividad y cada línea de código cuenta una historia.'
         },
         ctaButton: 'Descubre Mi Historia',
         ctaContact: 'Contactar'
@@ -271,13 +271,13 @@ export class TranslationService {
       about: {
         title: 'Acerca de Mí',
         subtitle: 'Conoce más sobre mí',
-        intro1: 'Soy una ingeniera de software y cantante de La Ciudad de la Furia, Buenos Aires, Argentina.',
+        intro1: 'Soy una ingeniera de software de La Ciudad de la Furia, Buenos Aires, Argentina.',
         intro2: {
           before: 'Doy vida a las ideas a través de',
           highlight: 'Rulienta',
           after: '— un espacio donde la tecnología se encuentra con la creatividad. Mi trabajo se enfoca en construir experiencias digitales intuitivas, eficientes y significativas.'
         },
-        intro3: 'Más allá de programar, la música es mi otro lenguaje. Cantar me permite expresar emociones y conectar con las personas de una manera que alimenta mi creatividad e inspira mi enfoque hacia la tecnología.',
+        intro3: 'Me apasiona el código limpio, las arquitecturas bien diseñadas y el aprendizaje continuo. Disfruto transformar problemas complejos en soluciones elegantes y funcionales.',
         developer: 'Desarrolladora',
         musician: 'Música',
         randomFacts: 'Datos curiosos',
@@ -295,8 +295,8 @@ export class TranslationService {
           songInterpretation: 'Interpretación de canciones'
         },
         facts: {
-          music: 'La música es mi combustible creativo',
-          blending: 'Me encanta mezclar tecnología con arte',
+          music: 'Me encanta transformar problemas complejos en soluciones elegantes',
+          blending: 'El open source y el aprendizaje continuo me impulsan',
           mate: 'El mate es mi compañero de programación',
           learning: 'Siempre aprendiendo nuevas tecnologías',
           argentina: 'Argentina es mi base creativa',
@@ -311,8 +311,8 @@ export class TranslationService {
         },
         story: {
           paragraph1: 'Entré al mundo de la tecnología impulsada por el deseo de encontrar un trabajo que me diera más tiempo de calidad con mi familia. Quería dedicarme a algo que me apasionara mientras tenía la flexibilidad de trabajar desde casa—algo que toda madre realmente necesita.',
-          paragraph2: 'En 2021, comencé este viaje profesional que me mantiene profundamente inmersa en la tecnología hoy. La combinación única de tecnología, música y maternidad define quién soy ahora. Esta es Rosemary Calderón—Rulienta—una marca que representa a una chica de cabello rizado llena de vida, motivación y un futuro innovador por delante.',
-          paragraph3: 'Equilibrar mis roles como desarrolladora, música y madre me ha enseñado el valor de la adaptabilidad y la resolución creativa de problemas. Cada aspecto de mi vida enriquece a los demás, creando una perspectiva única que aporto a cada proyecto y colaboración.'
+          paragraph2: 'En 2021, comencé este viaje profesional que me mantiene profundamente inmersa en la tecnología hoy. La combinación de tecnología y maternidad define quién soy ahora. Esta es Rosemary Calderón—Rulienta—una marca que representa a una chica de cabello rizado llena de vida, motivación y un futuro innovador por delante.',
+          paragraph3: 'Equilibrar mis roles como desarrolladora y madre me ha enseñado el valor de la adaptabilidad y la resolución creativa de problemas. Cada aspecto de mi vida enriquece a los demás, creando una perspectiva única que aporto a cada proyecto y colaboración.'
         }
       },
       portfolio: {

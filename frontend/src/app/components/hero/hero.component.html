@@ -9,30 +9,32 @@
   </div>
 </div>
 <div class="split-container2">
-  <div class="mobile-hero-content">
+  <div class="mobile-banner">
     <div class="imgMobile">
       <img src="/assets/img/rulientaPic.jpeg" alt="Rulienta Profile" class="mobile-profile-image">
     </div>
-    <div class="hero-containerText">
-      <div class="profile-section">
-        <div class="profile-info">
-          <span class="location-text">Buenos Aires, Argentina</span>
-        </div>
-      </div>
-      <h1 class="hero-title">
-        {{ 'hero.title.before' | translate }}
-        <span class="rulienta-brand">{{ 'hero.title.highlight' | translate }}</span>
-        {{ 'hero.title.after' | translate }}
-      </h1>
-      <p class="hero-subtitle">
-        {{ 'hero.subtitle.before' | translate }}
-        <span class="rulienta-brand">{{ 'hero.subtitle.highlight' | translate }}</span>
-        {{ 'hero.subtitle.after' | translate }}
-      </p>
-      <div class="hero-actions">
-        <a routerLink="/about" class="cta-button primary">{{ 'hero.ctaButton' | translate }}</a>
-        <a routerLink="/portfolio" class="cta-button secondary">{{ 'nav.portfolio' | translate }}</a>
-      </div>
+  </div>
+  <div class="hero-containerText">
+    <span class="location-text">Buenos Aires, Argentina</span>
+    <h1 class="hero-title">
+      {{ 'hero.title.before' | translate }}
+      <span class="rulienta-brand">{{ 'hero.title.highlight' | translate }}</span>
+    </h1>
+    <div class="social-icons">
+      <a href="https://github.com/rosscalpe" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/rosemary-calderon" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://instagram.com/rulienta" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="mailto:rosemarycalderonp@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p class="hero-subtitle">
+      {{ 'hero.subtitle.before' | translate }}
+      <span class="rulienta-brand">{{ 'hero.subtitle.highlight' | translate }}</span>
+      {{ 'hero.subtitle.after' | translate }}
+    </p>
+    <div class="hero-actions">
+      <a routerLink="/about" class="cta-button primary">{{ 'hero.ctaButton' | translate }}</a>
+      <a routerLink="/portfolio" class="cta-button secondary">{{ 'nav.portfolio' | translate }}</a>
+      <a routerLink="/contact" class="cta-button contact">{{ 'hero.ctaContact' | translate }}</a>
     </div>
   </div>
 </div>
