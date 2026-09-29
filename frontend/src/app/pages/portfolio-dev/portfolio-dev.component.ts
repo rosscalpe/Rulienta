@@ -27,23 +27,23 @@ export class PortfolioDevComponent {
   // Tecnologías principales organizadas por categoría
   frontendTechs = [
     { name: 'React', icon: '⚛️', experience: '3+ años' },
-    { name: 'Angular', icon: '🅰️', experience: '2+ años' },
-    { name: 'JavaScript', icon: '🟨', experience: '3+ años' },
-    { name: 'TypeScript', icon: '🔷', experience: '3+ años' }
+    { name: 'Angular', icon: '🅰️', experience: '4+ años' },
+    { name: 'JavaScript', icon: '🟨', experience: '4+ años' },
+    { name: 'TypeScript', icon: '🔷', experience: '4+ años' }
   ];
 
   backendTechs = [
-    { name: 'Node.js', icon: '🟢', experience: '3+ años' },
-    { name: 'PHP', icon: '🐘', experience: '2+ años' },
-    { name: 'Python', icon: '🐍', experience: '2+ años' },
+    { name: 'Node.js', icon: '🟢', experience: '4+ años' },
+    { name: 'PHP', icon: '🐘', experience: '3+ años' },
+    { name: 'Python', icon: '🐍', experience: '3+ años' },
     { name: 'Java', icon: '☕', experience: '2+ años' },
-    { name: 'Kotlin', icon: '🎯', experience: '1+ año' }
+    { name: 'Kotlin', icon: '🎯', experience: '2+ año' }
   ];
 
   databaseTechs = [
-    { name: 'SQL Server', icon: '🏢', experience: '3+ años' },
-    { name: 'MySQL', icon: '🐬', experience: '3+ años' },
-    { name: 'SQLite', icon: '📱', experience: '2+ años' }
+    { name: 'SQL Server', icon: '🏢', experience: '4+ años' },
+    { name: 'MySQL', icon: '🐬', experience: '4+ años' },
+    { name: 'SQLite', icon: '📱', experience: '3+ años' }
   ];
 
   // Proyectos personales disponibles en GitHub
